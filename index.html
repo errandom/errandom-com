@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="dark" />
+<title>errandom — ventures by Kenneth Fischer</title>
+<meta name="description" content="errandom is the umbrella for a family of ventures by Kenneth Fischer — including ARGOS, your private AI Chief of Staff, and freshNclean.ch. Tools that give people back their time and attention." />
+<link rel="canonical" href="https://errandom.com/" />
+
+<!-- Open Graph / social -->
+<meta property="og:title" content="errandom — ventures by Kenneth Fischer" />
+<meta property="og:description" content="The umbrella for a family of ventures — ARGOS, freshNclean.ch, and more. Tools that give people back their time and attention." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://errandom.com/" />
+<meta name="twitter:card" content="summary" />
+<meta name="theme-color" content="#0a101d" />
+
+<!-- Inline gold "e." favicon, no external asset needed -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a101d'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-weight='700' font-size='40' fill='%23d9bd72'%3Ee%3C/text%3E%3Ccircle cx='46' cy='44' r='4' fill='%23d9bd72'/%3E%3C/svg%3E" />
+
+<style>
+  /* Montserrat — geometric sans for the wordmark & headings (self-hosted). */
+  @font-face{ font-family:"Montserrat"; font-style:normal; font-weight:600; font-display:swap; src:url("/fonts/montserrat-600.woff2") format("woff2"); }
+  @font-face{ font-family:"Montserrat"; font-style:normal; font-weight:700; font-display:swap; src:url("/fonts/montserrat-700.woff2") format("woff2"); }
+
+  :root{
+    --bg:#0a101d; --panel:#141e33; --panel2:#0e1626; --line:#243350;
+    --text:#eaf0f8; --dim:#93a1b8; --gold:#d9bd72; --accent:#d9bd72; --accent-ink:#0a101d;
+    --ok:#5bd6a0; --soon:#f0a35e;
+    --font-title:"Montserrat",-apple-system,"Segoe UI",sans-serif;
+    --maxw:1040px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  html,body{margin:0}
+  body{
+    background:radial-gradient(1200px 620px at 72% -12%, #1a2b47 0%, var(--bg) 55%) no-repeat;
+    background-color:var(--bg);
+    color:var(--text);
+    font:16px/1.6 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    min-height:100dvh; -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--gold); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 22px}
+
+  /* ---- Header / nav ---- */
+  header{
+    position:sticky; top:0; z-index:40;
+    background:rgba(10,16,29,.82); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  header .bar{display:flex; align-items:center; gap:14px; padding:14px 22px; max-width:var(--maxw); margin:0 auto}
+  .brand{font-family:var(--font-title); font-weight:700; font-size:20px; letter-spacing:.28em; color:var(--gold); text-transform:lowercase}
+  .brand .dot{color:var(--text)}
+  nav{margin-left:auto; display:flex; gap:22px; flex-wrap:wrap}
+  nav a{color:var(--dim); font-size:14px; letter-spacing:.02em}
+  nav a:hover{color:var(--text); text-decoration:none}
+
+  /* ---- Hero ---- */
+  .hero{padding:88px 0 64px; text-align:left}
+  .eyebrow{font-family:var(--font-title); font-weight:600; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); font-size:12px; margin:0 0 18px}
+  .hero h1{font-family:var(--font-title); font-weight:700; font-size:clamp(34px,6vw,60px); line-height:1.08; margin:0 0 20px; letter-spacing:-.01em}
+  .hero h1 .accent{color:var(--gold)}
+  .hero p.lead{font-size:clamp(17px,2.2vw,21px); color:var(--dim); max-width:640px; margin:0 0 30px}
+  .cta-row{display:flex; gap:12px; flex-wrap:wrap}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; padding:12px 20px; border-radius:10px;
+    font-weight:600; font-size:15px; border:1px solid var(--line); cursor:pointer; transition:.15s;
+  }
+  .btn.primary{background:var(--gold); color:var(--accent-ink); border-color:var(--gold)}
+  .btn.primary:hover{filter:brightness(1.06); text-decoration:none}
+  .btn.ghost{background:transparent; color:var(--text)}
+  .btn.ghost:hover{border-color:var(--gold); color:var(--gold); text-decoration:none}
+
+  /* ---- Sections ---- */
+  section{padding:56px 0; border-top:1px solid var(--line)}
+  .sec-head{display:flex; align-items:baseline; gap:14px; margin:0 0 8px}
+  .sec-head h2{font-family:var(--font-title); font-weight:700; font-size:clamp(24px,3.4vw,32px); margin:0; letter-spacing:-.01em}
+  .sec-head .num{font-family:var(--font-title); color:var(--gold); font-weight:700; font-size:14px; letter-spacing:.12em}
+  .sec-sub{color:var(--dim); margin:0 0 30px; max-width:620px}
+
+  /* ---- Ventures grid ---- */
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:18px}
+  .card{
+    position:relative; display:flex; flex-direction:column; gap:10px;
+    background:linear-gradient(180deg, rgba(20,30,51,.7), rgba(14,22,38,.7));
+    border:1px solid var(--line); border-radius:14px; padding:22px;
+    transition:.18s; overflow:hidden;
+  }
+  a.card:hover{transform:translateY(-3px); border-color:rgba(217,189,114,.55); text-decoration:none}
+  .card .top{display:flex; align-items:center; justify-content:space-between; gap:10px}
+  .card h3{font-family:var(--font-title); font-weight:700; font-size:20px; margin:0; color:var(--text)}
+  .card p{margin:0; color:var(--dim); font-size:15px}
+  .card .go{margin-top:auto; padding-top:8px; color:var(--gold); font-size:14px; font-weight:600}
+  .tag{
+    font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+    padding:4px 9px; border-radius:999px; white-space:nowrap;
+  }
+  .tag.live{color:var(--ok); background:rgba(91,214,160,.12); border:1px solid rgba(91,214,160,.4)}
+  .tag.soon{color:var(--soon); background:rgba(240,163,94,.1); border:1px solid rgba(240,163,94,.38)}
+  .card.disabled{opacity:.72}
+
+  /* ---- About ---- */
+  .about-grid{display:grid; grid-template-columns:1.4fr 1fr; gap:34px; align-items:start}
+  .about-grid p{color:var(--dim); margin:0 0 16px}
+  .about-grid p strong{color:var(--text); font-weight:600}
+  .facts{background:var(--panel2); border:1px solid var(--line); border-radius:14px; padding:22px}
+  .facts .row{display:flex; justify-content:space-between; gap:16px; padding:11px 0; border-bottom:1px solid var(--line); font-size:14px}
+  .facts .row:last-child{border-bottom:0}
+  .facts .row span:first-child{color:var(--dim)}
+  .facts .row span:last-child{color:var(--text); font-weight:600; text-align:right}
+
+  /* ---- Contact ---- */
+  .contact-inner{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:22px;
+    background:linear-gradient(120deg, rgba(217,189,114,.08), rgba(20,30,51,.5)); border:1px solid var(--line); border-radius:16px; padding:30px}
+  .contact-inner h2{font-family:var(--font-title); font-weight:700; font-size:clamp(22px,3vw,30px); margin:0 0 6px}
+  .contact-inner p{margin:0; color:var(--dim)}
+
+  footer{border-top:1px solid var(--line); padding:26px 0 40px; color:var(--dim); font-size:13px}
+  footer .fbar{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center}
+  footer .brand{font-size:15px}
+
+  @media (max-width:720px){
+    nav{gap:16px}
+    .hero{padding:60px 0 44px}
+    .about-grid{grid-template-columns:1fr; gap:22px}
+  }
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} a.card:hover{transform:none} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <span class="brand">errandom<span class="dot">.</span></span>
+    <nav>
+      <a href="#ventures">Ventures</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- HERO -->
+  <section class="hero" style="border-top:0">
+    <p class="eyebrow">errandom · Kenneth Fischer</p>
+    <h1>An umbrella for ventures that give people back their <span class="accent">time&nbsp;&amp;&nbsp;attention</span>.</h1>
+    <p class="lead">errandom is the home for a growing family of products and services — from a private AI Chief of Staff to everyday services done well. Built with judgment, privacy, and craft at the core.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="#ventures">Explore the ventures</a>
+      <a class="btn ghost" href="#contact">Get in touch</a>
+    </div>
+  </section>
+
+  <!-- VENTURES -->
+  <section id="ventures">
+    <div class="sec-head"><span class="num">01</span><h2>Ventures</h2></div>
+    <p class="sec-sub">Each venture stands on its own, united by one idea: reduce the noise, protect what matters, and deliver something genuinely useful.</p>
+
+    <div class="grid">
+
+      <a class="card" href="https://argos.errandom.com" target="_blank" rel="noopener">
+        <div class="top"><h3>ARGOS</h3><span class="tag live">Live</span></div>
+        <p>Your private AI Chief of Staff. Reasons over your real calendar and inbox across Google &amp; Outlook, keeps every decision aligned with your principles, and never acts without your OK.</p>
+        <span class="go">argos.errandom.com →</span>
+      </a>
+
+      <a class="card" href="https://freshnclean.ch" target="_blank" rel="noopener">
+        <div class="top"><h3>freshNclean.ch</h3><span class="tag live">Live</span></div>
+        <p>Toilet paper on autopilot — tell us how many rolls you need and how often, and we deliver to your door. One less thing to ever think about.</p>
+        <span class="go">freshnclean.ch →</span>
+      </a>
+
+      <div class="card disabled">
+        <div class="top"><h3>ARGOS Inc.</h3><span class="tag soon">Coming soon</span></div>
+        <p>The ARGOS Chief-of-Staff intelligence, reshaped for small &amp; medium businesses — team-scale judgment, coordination, and governance.</p>
+        <span class="go">In development</span>
+      </div>
+
+      <div class="card disabled">
+        <div class="top"><h3>errandom</h3><span class="tag soon">Coming soon</span></div>
+        <p>A marketplace for services — connecting people who need things done with trusted providers who do them well.</p>
+        <span class="go">In development</span>
+      </div>
+
+      <div class="card disabled">
+        <div class="top"><h3>errandom Consulting</h3><span class="tag soon">Coming soon</span></div>
+        <p>Hands-on advisory for AI products, automation, and operating models — turning ambitious ideas into working systems.</p>
+        <span class="go">In development</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="sec-head"><span class="num">02</span><h2>About</h2></div>
+    <div class="about-grid">
+      <div>
+        <p><strong>errandom</strong> is the umbrella brand of <strong>Kenneth Fischer</strong> — a builder focused on tools and services that quietly remove friction from everyday life and work.</p>
+        <p>The thread running through every venture is <strong>judgment over automation</strong>: technology should calibrate to <em>your</em> priorities, respect your privacy by design, and earn trust before it acts. Whether it's an AI Chief of Staff or a spotless home, the goal is the same — hand people back their time and attention.</p>
+        <p>Some ventures are software, some are hands-on services, and more are on the way. errandom is where they all live.</p>
+      </div>
+      <div class="facts">
+        <div class="row"><span>Founder</span><span>Kenneth Fischer</span></div>
+        <div class="row"><span>Based in</span><span>Switzerland</span></div>
+        <div class="row"><span>Live ventures</span><span>ARGOS · freshNclean</span></div>
+        <div class="row"><span>Focus</span><span>AI · Services</span></div>
+        <div class="row"><span>Ethos</span><span>Privacy &amp; craft first</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="sec-head"><span class="num">03</span><h2>Contact</h2></div>
+    <div class="contact-inner">
+      <div>
+        <h2>Let's talk.</h2>
+        <p>Questions, partnerships, or just curious about a venture? Reach out directly.</p>
+      </div>
+      <div class="cta-row">
+        <a class="btn primary" href="mailto:info@errandom.com">info@errandom.com</a>
+        <a class="btn ghost" href="https://argos.errandom.com" target="_blank" rel="noopener">Try ARGOS</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap fbar">
+    <span class="brand">errandom<span class="dot">.</span></span>
+    <span>© <span id="yr"></span> errandom · Kenneth Fischer. All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("yr").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
