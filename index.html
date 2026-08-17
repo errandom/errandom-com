@@ -121,6 +121,9 @@
   footer{border-top:1px solid var(--line); padding:26px 0 40px; color:var(--dim); font-size:13px}
   footer .fbar{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center}
   footer .brand{font-size:15px}
+  .legal-links{display:flex; flex-wrap:wrap; gap:8px 16px; justify-content:flex-end}
+  .legal-links a{color:var(--dim)}
+  .legal-links a:hover{color:var(--gold)}
 
   @media (max-width:720px){
     nav{gap:16px}
@@ -236,6 +239,12 @@
   <div class="wrap fbar">
     <span class="brand">errandom<span class="dot">.</span></span>
     <span>© <span id="yr"></span> errandom · Kenneth Fischer. All rights reserved.</span>
+    <nav class="legal-links" aria-label="Legal">
+      <a href="/legal/terms-and-conditions/">Terms</a>
+      <a href="/legal/privacy-notice/">Privacy</a>
+      <a href="/legal/cookie-notice/">Cookies</a>
+      <a href="/legal/legal-notice/">Legal Notice</a>
+    </nav>
   </div>
 </footer>
 

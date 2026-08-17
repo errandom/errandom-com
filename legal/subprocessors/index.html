@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark" />
+<title>Subprocessors &amp; Connected Services — errandom</title>
+<meta name="description" content="Subprocessors &amp; Connected Services for ARGOS by errandom Fischer." />
+<link rel="canonical" href="https://www.errandom.com/legal/subprocessors/" />
+<link rel="stylesheet" href="/legal/legal.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a101d'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-weight='700' font-size='40' fill='%23d9bd72'%3Ee%3C/text%3E%3Ccircle cx='46' cy='44' r='4' fill='%23d9bd72'/%3E%3C/svg%3E" />
+</head>
+<body>
+<header><div class="bar"><a class="brand" href="/">errandom.</a><nav aria-label="Legal documents"><a href="/">Home</a><a href="/legal/">Legal</a><a href="https://argos.errandom.com">ARGOS</a></nav></div></header>
+<main><article><h1>ARGOS Subprocessor and Third-Party Service List</h1>
+<blockquote>
+<p>Version <code>1.0-beta</code> - Last updated <code>17 August 2026</code></p>
+</blockquote>
+<p>This page distinguishes:</p>
+<ul>
+<li><strong>Subprocessors</strong>, which process personal data for the ARGOS Operator in order
+  to provide the Service; and</li>
+<li><strong>user-directed connected services</strong>, which a user independently chooses to
+  connect and which generally process data under their own terms.</li>
+</ul>
+<p>Only services actually enabled in production should appear as active
+subprocessors. Contracting entity, region, retention, model-training treatment and
+transfer safeguards must be verified against the specific account and contract,
+not a provider's general marketing page.</p>
+<h2>Core subprocessors</h2>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Service and purpose</th>
+<th>Data categories</th>
+<th>Expected locations</th>
+<th>Transfer/safeguard verification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Microsoft</td>
+<td>Azure Container Apps, Blob Storage, Key Vault, Container Registry and related hosting/security; Microsoft Entra identity and Microsoft 365 support mail</td>
+<td>Account identifiers, durable user data, secrets, logs, application traffic and support correspondence</td>
+<td>Primary ARGOS deployment: Switzerland North; identity, support and telemetry may involve other locations under contract</td>
+<td>Microsoft data-protection terms and applicable Swiss/EEA transfer safeguards</td>
+</tr>
+<tr>
+<td>Google</td>
+<td>Gemini API generative-AI processing, when configured and accepted</td>
+<td>Prompt, selected profile/connector context, attachments or extracted text, generated output, technical metadata</td>
+<td>Processing location depends on the exact Gemini service and project configuration and may include locations outside Switzerland/EEA</td>
+<td>Google API/cloud data terms and applicable Swiss/EEA transfer safeguards</td>
+</tr>
+<tr>
+<td>OpenAI</td>
+<td>OpenAI API generative-AI processing</td>
+<td>Same categories as above</td>
+<td>Not active in the current private-beta provider selection; contracting entity, region and endpoint must be disclosed before enablement</td>
+<td>Verify business/API DPA, retention controls, training treatment and transfer mechanism before enablement</td>
+</tr>
+<tr>
+<td>Microsoft</td>
+<td>Azure OpenAI generative-AI processing</td>
+<td>Same categories as above</td>
+<td>Not active in the current private-beta provider selection; contracting entity and deployment region must be disclosed before enablement</td>
+<td>Verify Azure OpenAI data terms, abuse-monitoring configuration, region and transfers before enablement</td>
+</tr>
+<tr>
+<td>None currently</td>
+<td>Custom OpenAI-compatible endpoint</td>
+<td>Same categories as above</td>
+<td>Custom providers are disabled for the current private beta</td>
+<td>A custom provider must not be enabled until contract, security, retention, training and transfer review is complete</td>
+</tr>
+</tbody>
+</table>
+<p>Local Ollama processing does not create an external AI subprocessor when it runs
+solely within infrastructure controlled by the Operator. The underlying hosting
+provider remains listed where applicable.</p>
+<h2>Operational providers to verify</h2>
+<p>Add any provider that can receive production personal data for:</p>
+<ul>
+<li>application monitoring, telemetry or error reporting;</li>
+<li>transactional email and support;</li>
+<li>domain/DNS or content delivery where request identifiers are logged;</li>
+<li>payment and subscription processing;</li>
+<li>customer support or issue tracking;</li>
+<li>backups and disaster recovery; or</li>
+<li>legal/compliance case management.</li>
+</ul>
+<p>GitHub Pages hosts the public errandom.com site and may process
+ordinary web-request metadata, but it does not host authenticated ARGOS account
+data. The list will be updated if domain/DNS, source deployment, monitoring or
+other operational providers begin receiving production personal data.</p>
+<h2>User-directed connected services</h2>
+<p>Depending on what the user enables, ARGOS may exchange data with services such as:</p>
+<ul>
+<li>Google Gmail, Calendar, Drive/YouTube and health APIs;</li>
+<li>Microsoft Outlook, Calendar, OneDrive and Microsoft Graph;</li>
+<li>TikTok and other social platforms;</li>
+<li>travel, booking and transport providers;</li>
+<li>Uber or mobility providers;</li>
+<li>health and fitness providers;</li>
+<li>household, energy and smart-home providers; and</li>
+<li>communication or messaging providers.</li>
+</ul>
+<p>These providers are not automatically subprocessors of the Operator merely
+because the user connects them. They may act as independent controllers under
+their own terms. The connector screen should identify the provider, requested
+permissions, data exchanged and whether ARGOS stores derived or cached data.</p>
+<h2>Provider-change notice</h2>
+<p>We will publish changes to this list before a new subprocessor begins processing
+existing user data where the applicable contract or law requires advance notice.
+An external AI provider change is also a provider-specific disclosure and consent
+event where consent is relied upon. Users may object through
+<code>info@errandom.com</code>; available remedies depend on the circumstances and
+applicable law.</p></article></main>
+<footer>© 2026 errandom Fischer · Hardstrasse 20 · CH-8304 Wallisellen · <a href="mailto:info@errandom.com">info@errandom.com</a></footer>
+</body>
+</html>
