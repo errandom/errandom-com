@@ -85,6 +85,12 @@ p{margin:0 0 18px}
 .scope-note{border-left:2px solid var(--gold);padding-left:22px;margin-top:28px;max-width:930px}
 .scope-note strong{font-size:14px}
 .scope-note p{font-size:13px;color:var(--dim);margin:8px 0 0}
+.ai-section{border-bottom:1px solid var(--line);background:linear-gradient(160deg,var(--bg),var(--panel-deep))}
+.ai-offers .price-card{padding:26px}
+.ai-offers .micro{margin-top:auto;margin-bottom:20px}
+.ai-offers .button{margin-top:0}
+.ai-evidence{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.ai-evidence h3{font-size:17px}
 .process-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;counter-reset:step;list-style:none;padding:0;margin:0}
 .process-grid li{border-top:1px solid var(--line);padding-top:24px;counter-increment:step}
 .process-grid li::before{content:"0" counter(step);display:block;color:var(--gold);font:600 13px var(--title);margin-bottom:24px}
@@ -137,7 +143,7 @@ textarea{resize:vertical;line-height:1.5}
   .hero-note{max-width:620px}
   .hero-note .task-list{margin-block:18px}
   .section{padding-block:52px}
-  .three-grid,.process-grid,.about-grid,.enquiry-grid,.faq-section{grid-template-columns:1fr}
+  .three-grid,.process-grid,.about-grid,.enquiry-grid,.faq-section,.ai-evidence{grid-template-columns:1fr}
   .main-offers{grid-template-columns:1fr}
   .price-card{padding:24px}
   .process-grid{gap:22px}
@@ -150,7 +156,7 @@ textarea{resize:vertical;line-height:1.5}
 @media(max-width:460px){
   .header-inner{gap:12px;flex-wrap:wrap;padding-block:12px}
   .brand{font-size:18px}
-  .site-header nav{gap:18px;width:100%;justify-content:space-between}
+  .site-header nav{gap:8px;width:100%;justify-content:space-between}
   .site-header nav a{font-size:13px}
   .actions{flex-direction:column}
   .actions .button{width:100%}
