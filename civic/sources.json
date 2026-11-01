@@ -1,0 +1,8 @@
+[
+  {"id":"ballot","url":"https://www.admin.ch/de/volksabstimmung-vom-29-november-2026","expectedText":"November 2026"},
+  {"id":"ahv","url":"https://www.admin.ch/de/ahv-zusatzfinanzierung","expectedText":"Mehrwertsteuer"},
+  {"id":"feuerwerk","url":"https://www.admin.ch/de/feuerwerksinitiative","expectedText":"Feuerwerks"},
+  {"id":"ehepaare","url":"https://www.admin.ch/de/ehepaarbesteuerung","expectedText":"Individualbesteuerung"},
+  {"id":"kriegsmaterial","url":"https://www.admin.ch/de/kriegsmaterialgesetz","expectedText":"Kriegsmaterial"},
+  {"id":"discovery","url":"https://www.admin.ch/de/eidgenoessische-abstimmungen","expectedText":"Volksabstimmungen"}
+]
