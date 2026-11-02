@@ -16,6 +16,8 @@ async function account() {
   document.querySelector('#newsletter').checked = data.newsletter;
   document.querySelector('#portal').hidden = !data.portalReady;
   document.querySelector('#packet').hidden = !data.paid;
+  document.querySelector('#dossier').hidden = !data.paid;
+  clearDossier();
   document.querySelector('#upgrade-panel').hidden = data.paid || !data.billingReady;
   document.querySelector('#membership-status').textContent = data.paid
     ? `Civic Plus aktiv bis ${new Intl.DateTimeFormat('de-CH').format(new Date(data.paidUntil * 1000))}.${data.cancelAtEnd ? ' Die Verlängerung ist gekündigt.' : ''}`
@@ -29,6 +31,58 @@ async function action(button, callback) {
     status.textContent = `Nicht abgeschlossen: ${error.message}`;
   } finally { button.disabled = false; }
 }
+function clearDossier() {
+  document.querySelector('#dossier-panel').hidden = true;
+  document.querySelector('#dossier-content').replaceChildren();
+}
+function textNode(tag, text) {
+  const node = document.createElement(tag);
+  node.textContent = text;
+  return node;
+}
+document.querySelector('#dossier').addEventListener('click', event => action(event.currentTarget, async () => {
+  clearDossier();
+  const data = await api('dossier');
+  const content = document.createDocumentFragment();
+  content.append(textNode('p', `${data.date} · Version ${data.version} · Geprüft: ${new Intl.DateTimeFormat('de-CH', {
+    dateStyle: 'medium', timeStyle: 'short'
+  }).format(new Date(data.reviewedAt))}`), textNode('p', data.subscriber.introduction));
+  for (const dossier of data.subscriber.dossiers) {
+    const proposal = data.proposals.find(item => item.id === dossier.proposal);
+    const article = document.createElement('article');
+    article.className = 'card';
+    article.append(textNode('h3', proposal.title), textNode('p', proposal.question));
+    for (const section of dossier.sections) {
+      const claim = proposal.claims.find(item => item.id === section.claim);
+      const source = data.sources.find(item => item.id === claim.source);
+      const url = new URL(source.url);
+      if (url.protocol !== 'https:' || url.hostname !== 'www.admin.ch' || url.username || url.password) {
+        throw new Error('Ungültige Quellenadresse im Dossier.');
+      }
+      const detail = document.createElement('details');
+      detail.open = true;
+      const link = textNode('a', `Öffentliche Ausgangsaussage: ${claim.id}`);
+      link.href = `/civic/#quelle-${encodeURIComponent(claim.id)}`;
+      const citation = textNode('a', source.title);
+      citation.href = url.href;
+      detail.append(textNode('summary', section.title), textNode('p', section.type), textNode('p', section.text),
+        textNode('p', `Grenze der Analyse: ${section.uncertainty}`),
+        textNode('p', `Öffentliche Ausgangsaussage: ${claim.text}`), citation,
+        textNode('p', `Fundstelle: ${claim.passage} · Einordnung: ${claim.uncertainty}`), link);
+      article.append(detail);
+    }
+    article.append(textNode('h4', 'Ihr Entscheidungsblatt'));
+    const questions = document.createElement('ul');
+    for (const question of dossier.questions) questions.append(textNode('li', question));
+    article.append(questions, textNode('p', 'Notieren Sie Ihre Abwägung für sich oder auf dem Ausdruck. Ihre Antworten werden hier nicht erfasst.'));
+    content.append(article);
+  }
+  document.querySelector('#dossier-title').textContent = data.subscriber.title;
+  document.querySelector('#dossier-content').replaceChildren(content);
+  document.querySelector('#dossier-panel').hidden = false;
+  document.querySelector('#dossier-title').focus();
+  status.textContent = 'Ihre freigegebene Plus-Ausgabe ist geöffnet.';
+}));
 document.querySelector('#login-form').addEventListener('submit', event => {
   event.preventDefault();
   const form = event.currentTarget;
@@ -73,6 +127,7 @@ document.querySelector('#save-preferences').addEventListener('click', event => a
 }));
 document.querySelector('#logout').addEventListener('click', event => action(event.currentTarget, async () => {
   await api('logout', {});
+  clearDossier();
   document.querySelector('#member-panel').hidden = true;
   document.querySelector('#login-panel').hidden = false;
   status.textContent = 'Abgemeldet.';

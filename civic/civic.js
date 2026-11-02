@@ -42,6 +42,20 @@ async function loadServices() {
     const response = await fetch('/civic/config.json', { cache: 'no-store' });
     if (!response.ok) throw new Error('Service-Konfiguration nicht verfügbar.');
     const config = await response.json();
+    if (config.supportUrl) {
+      try {
+        const support = new URL(config.supportUrl);
+        if (support.protocol !== 'https:' || support.hostname !== 'buy.stripe.com' || support.port ||
+            support.username || support.password || support.pathname.length < 2) throw new Error('Ungültige Unterstützungsadresse.');
+        const action = document.querySelector('#support-action');
+        action.href = support.href;
+        action.hidden = false;
+        document.querySelector('#support-status').textContent = 'Einmaliger Beitrag auf der externen Stripe-Zahlungsseite. Prüfen Sie Empfänger, Betrag und Zahlungsart vor dem Bestätigen. Kein Civic Plus-Abonnement.';
+      } catch (error) {
+        console.error('Civic support configuration failed:', error);
+        document.querySelector('#support-status').textContent = 'Die direkte Unterstützungsfunktion ist derzeit nicht verfügbar. Nutzen Sie die E-Mail-Anfrage; sie startet keine Zahlung.';
+      }
+    }
     if (!config.apiBase) return;
     const url = new URL(config.apiBase);
     if (url.protocol !== 'https:' && !['localhost', '127.0.0.1'].includes(url.hostname)) throw new Error('Ungültige API-Adresse.');
