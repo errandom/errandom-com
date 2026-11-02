@@ -1,0 +1,278 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-11-29",
+  "date": "2026-11-29",
+  "language": "de",
+  "jurisdiction": "Bund",
+  "version": 1,
+  "review": {
+    "hash": "3fe768bd60468d09bfb084ef8611269c7d269922323913ac7c4e617300808baa",
+    "editor": "errandom",
+    "at": "2026-11-02T08:09:47.512Z"
+  },
+  "sources": [
+    {
+      "id": "ballot",
+      "publisher": "Schweizerische Bundeskanzlei",
+      "title": "Volksabstimmung vom 29. November 2026",
+      "url": "https://www.admin.ch/de/volksabstimmung-vom-29-november-2026",
+      "expectedText": "November 2026",
+      "reviewedHash": "0160dbedff83c9e77c75968ab9625c2685bb708c387d7ae50aef8e440fb9705f"
+    },
+    {
+      "id": "ahv",
+      "publisher": "Bundesrat / Bundeskanzlei",
+      "title": "AHV-Zusatzfinanzierung",
+      "url": "https://www.admin.ch/de/ahv-zusatzfinanzierung",
+      "expectedText": "Mehrwertsteuer",
+      "reviewedHash": "d81c1174aee421d3f55f8f24ec8793c7e8ba8bc1e5d3639502cbd8f4ce1ac2da"
+    },
+    {
+      "id": "feuerwerk",
+      "publisher": "Bundesrat / Bundeskanzlei",
+      "title": "Feuerwerksinitiative",
+      "url": "https://www.admin.ch/de/feuerwerksinitiative",
+      "expectedText": "Feuerwerks",
+      "reviewedHash": "4db65256e7ce5442ffc32c46f8035443397454d95e274854dd61b92f8f3c37f2"
+    },
+    {
+      "id": "ehepaare",
+      "publisher": "Bundesrat / Bundeskanzlei",
+      "title": "Ehepaarbesteuerung",
+      "url": "https://www.admin.ch/de/ehepaarbesteuerung",
+      "expectedText": "Individualbesteuerung",
+      "reviewedHash": "9de5710a793f83d3f47d493e863fa278f762aa627c8a78293e34c56dbb351ff3"
+    },
+    {
+      "id": "kriegsmaterial",
+      "publisher": "Bundesrat / Bundeskanzlei",
+      "title": "Kriegsmaterialgesetz",
+      "url": "https://www.admin.ch/de/kriegsmaterialgesetz",
+      "expectedText": "Kriegsmaterial",
+      "reviewedHash": "e81d833f7d8c1bcd33c66cd73bcd3cf6d3b4f2d980940f75c157ecd72da865ca"
+    },
+    {
+      "id": "discovery",
+      "publisher": "Schweizerische Bundeskanzlei",
+      "title": "Die Volksabstimmungen",
+      "url": "https://www.admin.ch/de/eidgenoessische-abstimmungen",
+      "expectedText": "Volksabstimmungen",
+      "reviewedHash": "6f718b803fa1cac57be8dd799db26e3f51da5543b5637a2c2dde6c182134b1a4"
+    }
+  ],
+  "proposals": [
+    {
+      "id": "ahv",
+      "title": "AHV-Zusatzfinanzierung",
+      "officialTitle": "Bundesbeschluss über die Zusatzfinanzierung der AHV durch eine Erhöhung der Mehrwertsteuer",
+      "question": "Soll die Mehrwertsteuer einen Teil der 13. AHV-Rente finanzieren?",
+      "claims": [
+        {
+          "id": "ahv-yes",
+          "section": "Ja bedeutet",
+          "type": "Mechanismus",
+          "text": "Ein Ja ermöglicht die beschlossene Mehrwertsteuererhöhung um 0,4 Prozentpunkte zur teilweisen Finanzierung der 13. AHV-Rente. Der reduzierte Satz für bestimmte Alltagsgüter wird nicht erhöht.",
+          "source": "ahv",
+          "passage": "Die Vorlage in Kürze, Absatz 2",
+          "uncertainty": "Die Erhöhung kann laut offizieller Erläuterung frühestens Anfang 2028 wirksam werden."
+        },
+        {
+          "id": "ahv-no",
+          "section": "Nein bedeutet",
+          "type": "Mechanismus",
+          "text": "Ein Nein lehnt diese zusätzliche Finanzierung ab, nicht den bereits beschlossenen Anspruch auf die 13. AHV-Rente. Für deren Finanzierung wären andere politische Entscheide nötig.",
+          "source": "ahv",
+          "passage": "Die Vorlage in Kürze, Absätze 1 und 2",
+          "uncertainty": "Welche Alternative beschlossen würde, steht mit dieser Abstimmung nicht fest."
+        },
+        {
+          "id": "ahv-estimate",
+          "section": "Was offen bleibt",
+          "type": "Schätzung",
+          "text": "Die offizielle Erläuterung erwartet zusätzliche Einnahmen von etwa 1,4 Milliarden Franken jährlich. Zusammen mit dem Bundesbeitrag soll dies ungefähr die Hälfte der Zusatzkosten decken.",
+          "source": "ahv",
+          "passage": "Die Vorlage in Kürze, Absatz 2",
+          "uncertainty": "Das ist eine Schätzung, keine garantierte Einnahme oder vollständige Finanzierung."
+        },
+        {
+          "id": "ahv-for",
+          "section": "Argument dafür",
+          "type": "Position",
+          "text": "Bundesrat und Parlamentsmehrheit begründen ihr Ja mit der Stabilisierung der AHV und einer Verteilung der Finanzierung auf mehrere Generationen.",
+          "source": "ahv",
+          "passage": "Empfehlung von Bundesrat und Parlament",
+          "uncertainty": "Dies ist eine politische Begründung, kein unabhängiger Wirksamkeitsnachweis."
+        },
+        {
+          "id": "ahv-against",
+          "section": "Argument dagegen",
+          "type": "Position",
+          "text": "Die parlamentarische Minderheit möchte die Finanzierung mit einer nächsten Reform verbinden, die auch strukturelle Massnahmen umfasst.",
+          "source": "ahv",
+          "passage": "Standpunkt der Minderheit im Parlament",
+          "uncertainty": "Ob und wann eine solche Reform zustande käme, ist offen."
+        }
+      ]
+    },
+    {
+      "id": "feuerwerk",
+      "title": "Feuerwerksinitiative",
+      "officialTitle": "Volksinitiative «Für eine Einschränkung von Feuerwerk»",
+      "question": "Soll lärmerzeugendes Feuerwerk national eingeschränkt werden?",
+      "claims": [
+        {
+          "id": "feuerwerk-yes",
+          "section": "Ja bedeutet",
+          "type": "Mechanismus",
+          "text": "Die Initiative verlangt ein nationales Verbot des Verkaufs und Gebrauchs lärmerzeugender Feuerwerkskörper. Kantone könnten Ausnahmen für Anlässe von überregionaler Bedeutung bewilligen.",
+          "source": "feuerwerk",
+          "passage": "Die Vorlage in Kürze, Absatz 2",
+          "uncertainty": "Die genaue Abgrenzung lärmerzeugender und lärmarmer Feuerwerkskörper muss konkretisiert werden."
+        },
+        {
+          "id": "feuerwerk-no",
+          "section": "Nein bedeutet",
+          "type": "Mechanismus",
+          "text": "Diese nationale Verfassungsregel wird nicht eingeführt. Bestehende Vorschriften sowie die Möglichkeiten von Kantonen und Gemeinden, Feuerwerk einzuschränken, bleiben bestehen.",
+          "source": "feuerwerk",
+          "passage": "Die Vorlage in Kürze, Absatz 1",
+          "uncertainty": "Lokale Regeln können unterschiedlich sein und sich unabhängig von dieser Abstimmung ändern."
+        },
+        {
+          "id": "feuerwerk-open",
+          "section": "Was offen bleibt",
+          "type": "Umsetzung",
+          "text": "Die Initiative definiert nicht abschliessend, welche Feuerwerkskörper wegen ihres Lärms verboten würden.",
+          "source": "feuerwerk",
+          "passage": "Die Vorlage in Kürze, Absatz 2",
+          "uncertainty": "Konkrete Produktgrenzen dürfen nicht als bereits feststehend dargestellt werden."
+        },
+        {
+          "id": "feuerwerk-for",
+          "section": "Argument dafür",
+          "type": "Position",
+          "text": "Das Initiativkomitee wirbt mit dem Schutz von Menschen, Tieren und Umwelt sowie einheitlicheren nationalen Regeln.",
+          "source": "feuerwerk",
+          "passage": "Empfehlung des Initiativkomitees",
+          "uncertainty": "Die behauptete Schutzwirkung wird hier als Position wiedergegeben, nicht quantifiziert."
+        },
+        {
+          "id": "feuerwerk-against",
+          "section": "Argument dagegen",
+          "type": "Position",
+          "text": "Bundesrat und Parlament halten die Initiative für zu weitgehend und verweisen auf bestehende Vorschriften und lokale Einschränkungsmöglichkeiten.",
+          "source": "feuerwerk",
+          "passage": "Empfehlung von Bundesrat und Parlament",
+          "uncertainty": "Ob bestehende Regeln ausreichen, ist eine zentrale politische Streitfrage."
+        }
+      ]
+    },
+    {
+      "id": "ehepaare",
+      "title": "Ehepaarbesteuerung",
+      "officialTitle": "Volksinitiative «Ja zu fairen Bundessteuern auch für Ehepaare – Diskriminierung der Ehe endlich abschaffen!»",
+      "question": "Soll die gemeinsame Besteuerung von Ehepaaren beim Bund verankert werden?",
+      "claims": [
+        {
+          "id": "ehepaare-yes",
+          "section": "Ja bedeutet",
+          "type": "Mechanismus",
+          "text": "Die Initiative würde für die direkte Bundessteuer die gemeinsame Erfassung der Einkommen von Ehepaaren und ein Benachteiligungsverbot in der Verfassung verankern.",
+          "source": "ehepaare",
+          "passage": "Die Vorlage in Kürze, Absatz 2",
+          "uncertainty": "Das konkrete Gesetz und damit die individuellen Auswirkungen hängen von der Umsetzung ab."
+        },
+        {
+          "id": "ehepaare-no",
+          "section": "Nein bedeutet",
+          "type": "Mechanismus",
+          "text": "Die Initiative wird nicht eingeführt. Die im März 2026 angenommene Individualbesteuerung bleibt der bereits beschlossene Reformpfad.",
+          "source": "ehepaare",
+          "passage": "Die Vorlage in Kürze, Absätze 1 und 2",
+          "uncertainty": "Laut offizieller Erläuterung ist die individuelle Besteuerung ab 2032 vorgesehen; spätere Gesetzesänderungen sind nicht ausgeschlossen."
+        },
+        {
+          "id": "ehepaare-open",
+          "section": "Was offen bleibt",
+          "type": "Schätzung",
+          "text": "Die offizielle Erläuterung nennt je nach Umsetzung eine geschätzte jährliche Entlastung bei der direkten Bundessteuer von 680 Millionen bis 3 Milliarden Franken.",
+          "source": "ehepaare",
+          "passage": "Die Vorlage in Kürze, Absatz 2",
+          "uncertainty": "Die Bandbreite ist umsetzungsabhängig und keine Zusage einer individuellen Steuerersparnis."
+        },
+        {
+          "id": "ehepaare-for",
+          "section": "Argument dafür",
+          "type": "Position",
+          "text": "Das Initiativkomitee sieht in der gemeinsamen Veranlagung mit Benachteiligungsverbot eine pragmatische und gerechte Lösung für Ehepaare.",
+          "source": "ehepaare",
+          "passage": "Empfehlung des Initiativkomitees",
+          "uncertainty": "Die Bewertung als gerecht ist eine politische Wertung."
+        },
+        {
+          "id": "ehepaare-against",
+          "section": "Argument dagegen",
+          "type": "Position",
+          "text": "Bundesrat und Parlament verweisen auf die bereits beschlossene Individualbesteuerung und befürchten Privilegien sowie unterschiedliche Systeme bei Bund und Kantonen.",
+          "source": "ehepaare",
+          "passage": "Empfehlung von Bundesrat und Parlament",
+          "uncertainty": "Die tatsächlichen Folgen hängen auch von der gesetzlichen Umsetzung ab."
+        }
+      ]
+    },
+    {
+      "id": "kriegsmaterial",
+      "title": "Kriegsmaterialgesetz",
+      "officialTitle": "Änderung vom 19. Dezember 2025 des Bundesgesetzes über das Kriegsmaterial",
+      "question": "Sollen die Exportbedingungen für Kriegsmaterial geändert werden?",
+      "claims": [
+        {
+          "id": "kriegsmaterial-yes",
+          "section": "Ja bedeutet",
+          "type": "Mechanismus",
+          "text": "Die Änderung erweitert unter Bedingungen Exportmöglichkeiten an Partnerstaaten in bewaffneten Konflikten. Sie schafft eine Abweichungskompetenz bei ausserordentlichen Umständen und verändert Zusicherungen zur Weitergabe.",
+          "source": "kriegsmaterial",
+          "passage": "Die Vorlage in Kürze, Absatz 2",
+          "uncertainty": "Neutralitätsrecht, Menschenrechte und internationale Verpflichtungen gelten weiter; konkrete Bewilligungen sind Einzelfallentscheide."
+        },
+        {
+          "id": "kriegsmaterial-no",
+          "section": "Nein bedeutet",
+          "type": "Mechanismus",
+          "text": "Die zur Abstimmung vorgelegten Änderungen treten nicht in Kraft. Die bestehenden Exportbedingungen bleiben ohne diese Revision bestehen.",
+          "source": "kriegsmaterial",
+          "passage": "Die Vorlage in Kürze, Absätze 1 und 2",
+          "uncertainty": "Ein Nein entscheidet nicht über jede einzelne spätere Exportbewilligung."
+        },
+        {
+          "id": "kriegsmaterial-open",
+          "section": "Was offen bleibt",
+          "type": "Prognose",
+          "text": "Die Vorlage regelt Bewilligungsmöglichkeiten; konkrete Folgen für Sicherheit, Exportvolumen oder Weitergaberisiken lassen sich daraus allein nicht als garantiert ableiten.",
+          "source": "kriegsmaterial",
+          "passage": "Die Vorlage in Kürze und beide Empfehlungen",
+          "uncertainty": "Wirkungsprognosen hängen von künftigen Entscheiden und dem internationalen Umfeld ab."
+        },
+        {
+          "id": "kriegsmaterial-for",
+          "section": "Argument dafür",
+          "type": "Position",
+          "text": "Bundesrat und Parlament begründen ihr Ja mit Exportmöglichkeiten an Partnerstaaten und dem Erhalt einer wettbewerbsfähigen inländischen Rüstungsindustrie.",
+          "source": "kriegsmaterial",
+          "passage": "Empfehlung von Bundesrat und Parlament",
+          "uncertainty": "Der Zusammenhang mit der Verteidigungsfähigkeit ist eine politische Begründung."
+        },
+        {
+          "id": "kriegsmaterial-against",
+          "section": "Argument dagegen",
+          "type": "Position",
+          "text": "Das Referendumskomitee befürchtet problematische Verkäufe und Weitergaben sowie höhere Risiken, dass Waffen in Kriegen oder bei Terrorgruppen eingesetzt werden.",
+          "source": "kriegsmaterial",
+          "passage": "Empfehlung des Referendumskomitees",
+          "uncertainty": "Diese Risiken sind die Position des Komitees, keine hier belegte quantitative Vorhersage."
+        }
+      ]
+    }
+  ],
+  "corrections": []
+}

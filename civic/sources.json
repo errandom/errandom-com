@@ -1,8 +1,38 @@
 [
-  {"id":"ballot","url":"https://www.admin.ch/de/volksabstimmung-vom-29-november-2026","expectedText":"November 2026"},
-  {"id":"ahv","url":"https://www.admin.ch/de/ahv-zusatzfinanzierung","expectedText":"Mehrwertsteuer"},
-  {"id":"feuerwerk","url":"https://www.admin.ch/de/feuerwerksinitiative","expectedText":"Feuerwerks"},
-  {"id":"ehepaare","url":"https://www.admin.ch/de/ehepaarbesteuerung","expectedText":"Individualbesteuerung"},
-  {"id":"kriegsmaterial","url":"https://www.admin.ch/de/kriegsmaterialgesetz","expectedText":"Kriegsmaterial"},
-  {"id":"discovery","url":"https://www.admin.ch/de/eidgenoessische-abstimmungen","expectedText":"Volksabstimmungen"}
+  {
+    "id": "ballot",
+    "url": "https://www.admin.ch/de/volksabstimmung-vom-29-november-2026",
+    "expectedText": "November 2026",
+    "reviewedHash": "0160dbedff83c9e77c75968ab9625c2685bb708c387d7ae50aef8e440fb9705f"
+  },
+  {
+    "id": "ahv",
+    "url": "https://www.admin.ch/de/ahv-zusatzfinanzierung",
+    "expectedText": "Mehrwertsteuer",
+    "reviewedHash": "d81c1174aee421d3f55f8f24ec8793c7e8ba8bc1e5d3639502cbd8f4ce1ac2da"
+  },
+  {
+    "id": "feuerwerk",
+    "url": "https://www.admin.ch/de/feuerwerksinitiative",
+    "expectedText": "Feuerwerks",
+    "reviewedHash": "4db65256e7ce5442ffc32c46f8035443397454d95e274854dd61b92f8f3c37f2"
+  },
+  {
+    "id": "ehepaare",
+    "url": "https://www.admin.ch/de/ehepaarbesteuerung",
+    "expectedText": "Individualbesteuerung",
+    "reviewedHash": "9de5710a793f83d3f47d493e863fa278f762aa627c8a78293e34c56dbb351ff3"
+  },
+  {
+    "id": "kriegsmaterial",
+    "url": "https://www.admin.ch/de/kriegsmaterialgesetz",
+    "expectedText": "Kriegsmaterial",
+    "reviewedHash": "e81d833f7d8c1bcd33c66cd73bcd3cf6d3b4f2d980940f75c157ecd72da865ca"
+  },
+  {
+    "id": "discovery",
+    "url": "https://www.admin.ch/de/eidgenoessische-abstimmungen",
+    "expectedText": "Volksabstimmungen",
+    "reviewedHash": "6f718b803fa1cac57be8dd799db26e3f51da5543b5637a2c2dde6c182134b1a4"
+  }
 ]
