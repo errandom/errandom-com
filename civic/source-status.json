@@ -1,45 +1,45 @@
 {
-  "checkedAt": "2026-11-10T23:24:31.162Z",
+  "checkedAt": "2026-11-11T14:26:16.883Z",
   "results": [
     {
       "id": "ballot",
       "url": "https://www.admin.ch/de/volksabstimmung-vom-29-november-2026",
-      "checkedAt": "2026-11-10T23:24:31.162Z",
+      "checkedAt": "2026-11-11T14:26:16.883Z",
       "state": "available",
       "hash": "0160dbedff83c9e77c75968ab9625c2685bb708c387d7ae50aef8e440fb9705f"
     },
     {
       "id": "ahv",
       "url": "https://www.admin.ch/de/ahv-zusatzfinanzierung",
-      "checkedAt": "2026-11-10T23:24:31.162Z",
+      "checkedAt": "2026-11-11T14:26:16.883Z",
       "state": "available",
       "hash": "d81c1174aee421d3f55f8f24ec8793c7e8ba8bc1e5d3639502cbd8f4ce1ac2da"
     },
     {
       "id": "feuerwerk",
       "url": "https://www.admin.ch/de/feuerwerksinitiative",
-      "checkedAt": "2026-11-10T23:24:31.162Z",
+      "checkedAt": "2026-11-11T14:26:16.883Z",
       "state": "available",
       "hash": "c745bf57c719f224d2fea61b9a8c780053a5a9267ee4a925941655ecf803997e"
     },
     {
       "id": "ehepaare",
       "url": "https://www.admin.ch/de/ehepaarbesteuerung",
-      "checkedAt": "2026-11-10T23:24:31.162Z",
+      "checkedAt": "2026-11-11T14:26:16.883Z",
       "state": "available",
       "hash": "b3a11596e45f0ae2c4b98e8ff4a92a030460c44bfc99165736f4c4258573d8f8"
     },
     {
       "id": "kriegsmaterial",
       "url": "https://www.admin.ch/de/kriegsmaterialgesetz",
-      "checkedAt": "2026-11-10T23:24:31.162Z",
+      "checkedAt": "2026-11-11T14:26:16.883Z",
       "state": "available",
       "hash": "e5807570b7c2e2a39327a26a522a38efdf41c554dd7bb0d92ae1d2273d406946"
     },
     {
       "id": "discovery",
       "url": "https://www.admin.ch/de/eidgenoessische-abstimmungen",
-      "checkedAt": "2026-11-10T23:24:31.162Z",
+      "checkedAt": "2026-11-11T14:26:16.883Z",
       "state": "available",
       "hash": "6f718b803fa1cac57be8dd799db26e3f51da5543b5637a2c2dde6c182134b1a4"
     }
